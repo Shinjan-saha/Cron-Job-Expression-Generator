@@ -16,34 +16,8 @@ upcoming run times without memorizing complex rules.
 -   🎨 **Clean UI** with black text on white background.\
 -   ⚡ Built with **Next.js 14**, **React 18**, and **Tailwind CSS**.
 
-------------------------------------------------------------------------
 
-## ⚙️ Installation & Setup
 
-1.  **Clone the repository**
-
-    ``` bash
-    git clone https://github.com/your-username/cron-job-generator.git
-    cd cron-job-generator
-    ```
-
-2.  **Install dependencies**
-
-    ``` bash
-    npm install
-    # or
-    yarn install
-    ```
-
-3.  **Run the development server**
-
-    ``` bash
-    npm run dev
-    # or
-    yarn dev
-    ```
-
-4.  Open <http://localhost:3000> in your browser 🎉
 
 ------------------------------------------------------------------------
 
@@ -55,12 +29,9 @@ upcoming run times without memorizing complex rules.
 -   [cron-parser](https://www.npmjs.com/package/cron-parser) -- Cron
     expression parsing
 
-------------------------------------------------------------------------
 
-## 📸 Preview
 
-![Cron Job Generator
-UI](https://via.placeholder.com/800x400.png?text=Cron+Job+Generator+Preview)
+
 
 ------------------------------------------------------------------------
 
