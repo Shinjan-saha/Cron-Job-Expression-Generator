@@ -46,6 +46,4 @@ This tool helps developers:\
 
 ------------------------------------------------------------------------
 
-## 📜 License
 
-MIT License © 2025 \[Your Name\]
