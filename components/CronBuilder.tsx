@@ -206,11 +206,11 @@ export default function CronBuilder(): JSX.Element {
   }
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white rounded-2xl shadow-lg">
+    <div className="max-w-3xl mx-auto p-6 bg-white rounded-2xl shadow-lg text-black">
       <h1 className="text-2xl font-semibold mb-4">Cron Job Expression Generator</h1>
 
       <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700">
+        <label className="block text-sm font-medium text-black">
           Natural language (try: "every Monday at 9am")
         </label>
         <div className="flex gap-2 mt-2">
@@ -220,36 +220,36 @@ export default function CronBuilder(): JSX.Element {
             className="flex-1 border rounded px-3 py-2"
             placeholder="e.g. every day at 14:30"
           />
-          <button onClick={applyNatural} className="px-4 py-2 rounded bg-indigo-600 text-white">
+          <button onClick={applyNatural} className="px-4 py-2 rounded bg-indigo-600 text-black">
             Apply
           </button>
         </div>
-        {message && <p className="text-sm text-bla-600 mt-2">{message}</p>}
+        {message && <p className="text-sm text-black mt-2">{message}</p>}
       </div>
 
       <div className="grid grid-cols-2 gap-4 mb-4">
         <div>
-          <label className="block text-sm font-medium text-black-700">Minute</label>
+          <label className="block text-sm font-medium text-black">Minute</label>
           <input
             value={minute}
             onChange={(e) => setMinute(e.target.value)}
             className="mt-1 block w-full border rounded px-2 py-2"
             placeholder="0 or * or */5"
           />
-          <p className="text-xs text-black-500 mt-1">Examples: 0, 30, *, */15</p>
+          <p className="text-xs text-black mt-1">Examples: 0, 30, *, */15</p>
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Hour</label>
+          <label className="block text-sm font-medium text-black">Hour</label>
           <input
             value={hour}
             onChange={(e) => setHour(e.target.value)}
             className="mt-1 block w-full border rounded px-2 py-2"
             placeholder="0-23 or *"
           />
-          <p className="text-xs text-black-500 mt-1">Examples: 0, 9, 14, *</p>
+          <p className="text-xs text-black mt-1">Examples: 0, 9, 14, *</p>
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Day of month</label>
+          <label className="block text-sm font-medium text-black">Day of month</label>
           <input
             value={dayOfMonth}
             onChange={(e) => setDayOfMonth(e.target.value)}
@@ -258,7 +258,7 @@ export default function CronBuilder(): JSX.Element {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700">Month</label>
+          <label className="block text-sm font-medium text-black">Month</label>
           <input
             value={month}
             onChange={(e) => setMonth(e.target.value)}
@@ -267,37 +267,37 @@ export default function CronBuilder(): JSX.Element {
           />
         </div>
         <div className="col-span-2">
-          <label className="block text-sm font-medium text-gray-700">Day of week</label>
+          <label className="block text-sm font-medium text-black">Day of week</label>
           <input
             value={dayOfWeek}
             onChange={(e) => setDayOfWeek(e.target.value)}
             className="mt-1 block w-full border rounded px-2 py-2"
             placeholder="0-6 (0=Sun) or *"
           />
-          <p className="text-xs text-gray-500 mt-1">Examples: 1 (Monday), 1-5 (Mon-Fri), 0 (Sun), *</p>
+          <p className="text-xs text-black mt-1">Examples: 1 (Monday), 1-5 (Mon-Fri), 0 (Sun), *</p>
         </div>
       </div>
 
       <div className="flex gap-2 mb-4">
-        <button onClick={presetEveryDay} className="px-3 py-2 rounded border">Every day 9:00</button>
-        <button onClick={presetEveryMonday} className="px-3 py-2 rounded border">Every Monday 9:00</button>
-        <button onClick={presetEveryMinute} className="px-3 py-2 rounded border">Every minute</button>
+        <button onClick={presetEveryDay} className="px-3 py-2 rounded border text-black">Every day 9:00</button>
+        <button onClick={presetEveryMonday} className="px-3 py-2 rounded border text-black">Every Monday 9:00</button>
+        <button onClick={presetEveryMinute} className="px-3 py-2 rounded border text-black">Every minute</button>
       </div>
 
-      <div className="bg-gray-50 p-4 rounded mb-4">
+      <div className="bg-gray-50 p-4 rounded mb-4 text-black">
         <div className="flex items-center justify-between">
           <div>
-            <div className="text-xs text-black-500">Cron expression</div>
+            <div className="text-xs text-black">Cron expression</div>
             <div className="font-mono text-lg">{cron}</div>
           </div>
           <div className="flex flex-col gap-2">
-            <button onClick={copyCron} className="px-3 py-2 rounded bg-green-600 text-white">Copy</button>
+            <button onClick={copyCron} className="px-3 py-2 rounded bg-green-600 text-black">Copy</button>
           </div>
         </div>
-        <div className="mt-3 text-sm text-gray-700">{human}</div>
+        <div className="mt-3 text-sm text-black">{human}</div>
       </div>
 
-      <div className="text-sm text-black-600">
+      <div className="text-sm text-black">
         <strong>Quick help:</strong>
         <ul className="list-disc ml-5 mt-2">
           <li>Fields: <code>minute hour day-of-month month day-of-week</code></li>
